@@ -1,0 +1,13 @@
+<launch>
+
+    <include file="$(find mqtt_client)/launch/mqtt_connection.launch" />
+
+    <node name="realtime_display" pkg="jinwubot_description" type="realtime_display" 
+    output="screen" />
+
+    <param name="freq_display" type="int" value="50" />
+    <include file="$(find jinwubot_description)/launch/display.launch" >
+        <arg name="gui_pub" value="false" />
+    </include>
+
+</launch>

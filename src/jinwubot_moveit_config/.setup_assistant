@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: jinwubot_description
+    relative_path: urdf/jinwubot.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/jinwubot.srdf
+  CONFIG:
+    author_name: zxliao
+    author_email: zhixiangleo@163.com
+    generated_timestamp: 1638175135

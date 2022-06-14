@@ -1,0 +1,9 @@
+smoothing_filter_name: /move_group/smoothing_6_coef
+
+smoothing_6_coef:
+- 0.25
+- 0.5
+- 1
+- 0.5
+- 0.25
+- 0.25

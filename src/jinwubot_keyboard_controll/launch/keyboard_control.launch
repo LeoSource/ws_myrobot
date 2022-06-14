@@ -1,0 +1,8 @@
+<launch>
+
+    <node name="keyboard_controller" pkg="jinwubot_keyboard_controll" type="keyboard_control"
+    output="screen" />
+
+    <!-- <include file="$(find jinwubot_description)/launch/realtime_display.launch" /> -->
+
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+<arg name="model" default="$(find jinwubot_description)urdf/jinwubot.urdf"/>
+<arg name="gui" default="True"/>
+<param name="robot_description" textfile="$(arg model)"/>
+<param name="use_gui" value="$(arg gui)"/>
+<node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find jinwubot_description)/config/display.rviz" />
+</launch>

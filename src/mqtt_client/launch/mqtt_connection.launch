@@ -1,0 +1,7 @@
+<launch>
+
+    <param name="freq_mqtt_receive" type="int" value="2" />
+    <node name="mqtt_client" pkg="mqtt_client" type="mqtt_client"
+    output="screen" />
+
+</launch>

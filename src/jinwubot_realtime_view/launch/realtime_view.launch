@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="test_talker" pkg="jinwubot_realtime_view" type="realtime_view" />
+
+    <include file="$(find jinwubot_description)/launch/display.launch" >
+        <arg name="gui_pub" value="false" />
+    </include>
+
+</launch>

@@ -1,0 +1,24 @@
+<launch>
+    <arg name="test_mode" default="true" />
+
+    <!-- load robot description -->
+    <param if="$(arg test_mode)" 
+    name="robot_description" textfile="$(find jinwubot_description)/urdf/jinwubot.urdf" />
+    <param unless="$(arg test_mode)" 
+    name="robot_description" command="$(find xacro)/xacro --inorder 
+    $(find jinwubot_description)/urdf/xarm.xacro" />
+
+    <!-- run joint_state_publisher_gui -->
+    <arg name="gui_pub" default="true" />
+    <node if="$(arg gui_pub)" name="joint_state_publish_gui" 
+    pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+    <!-- run robot_state_publisher -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" 
+    type="robot_state_publisher" />
+
+    <!-- run rviz -->
+    <node name="rviz" pkg="rviz" type="rviz"  
+    required="true" 
+    args="-d $(find jinwubot_description)/config/display.rviz" />
+</launch>

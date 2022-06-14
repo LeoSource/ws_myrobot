@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- <include file="$(find jinwubot_moveit_config)/launch/demo.launch" /> -->
+
+    <node name="move_group_tutorial" pkg="jinwubot_planning_test" type="move_group_tutorial"
+    respawn="false" output="screen" />
+
+
+</launch>
